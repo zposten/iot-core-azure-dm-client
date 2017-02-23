@@ -19,7 +19,13 @@ The format of the `"desired.microsoft.management.AppStoreUpdateCheck"` desired p
 
 The possible values of the `"appStoreUpdateCheck"` key are as follows:
 
- - For a one-time update check:
+- For updates performed by the default Windows Store client:
+
+```
+"default"
+```
+
+- For a one-time update check:
  
  <pre>
  {
