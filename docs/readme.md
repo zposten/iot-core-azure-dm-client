@@ -59,4 +59,5 @@ The operations initiated by the direct methods are as follows:
 The operations supported by the device twin are as follows:
 
 - [Scheduled Reboot](scheduled-reboot.md)
+- [Store Update Configuration](store-update-config.md)
 - [App Management](app-management.md)
