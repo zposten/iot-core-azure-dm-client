@@ -21,9 +21,9 @@ The possible values of the `"appStoreUpdateCheck"` key are as follows:
 
 - For updates performed by the default Windows Store client:
 
-```
-"default"
-```
+  ```
+  "default"
+  ```
 
 - For a one-time update check:
  
