@@ -24,6 +24,12 @@ The possible values of the `"appStoreUpdateCheck"` key are as follows:
   ```
   "default"
   ```
+  
+- To disable the default Windows Store client:
+
+  ```
+  "disabled"
+  ```
 
 - For a one-time update check:
  
