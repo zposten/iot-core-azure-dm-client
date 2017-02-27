@@ -46,7 +46,7 @@ The DM client maintains the inventory of installed apps in the `"reported.micros
 
 ### Successful Case
 
-If the DM client is able to bring the actual state in compliance with the reported state, the format of the `"reported.microsoft.management.apps"` property is as follows:
+If the DM client is able to bring the actual state in compliance with the desired state, the format of the `"reported.microsoft.management.apps"` property is as follows:
 
 <pre>
 "reported" : {
@@ -74,7 +74,7 @@ Only the apps that are tracked in `"desired.microsoft.management.apps"` are list
 
 ### Unsuccessful Case
 
-If the DM client is not able to bring the actual state in compliance with the reported state, the failure is reported in the `"reported.microsoft.management.apps"` property for each app. For example, this happens if the DM client is not able to install a requested version of the app, or when the app could not be uninstalled. 
+If the DM client is not able to bring the actual state in compliance with the desired state, the failure is reported in the `"reported.microsoft.management.apps"` property for each app. For example, this happens if the DM client is not able to install a requested version of the app, or when the app could not be uninstalled. 
 
 The format of the unsuccessful is as follows:
 
@@ -84,6 +84,7 @@ The format of the unsuccessful is as follows:
         "management" : {
             "apps" : {
                 "<i>packageFamilyName1</i>" : {
+                    ...
                     "error" : "<i>see below</i>"
                 }
                 <i>[,...]</i>
@@ -94,6 +95,8 @@ The format of the unsuccessful is as follows:
 </pre>
 
 The value of the `"error"` property is a string in implementation-defined format (for example, it could be an error message, the exception text or a call stack).
+
+Not the that the `"error"` property can coexist with the `"version"` property. If an app cannot be updated, the reported properties will still have the actual version. However, if the app cannot be installed at all, the `"version"` will not appear at all.
 
 ## Examples
 
