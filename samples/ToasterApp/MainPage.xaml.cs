@@ -55,6 +55,9 @@ namespace Toaster
 
         private async Task<string> GetConnectionStringAsync()
         {
+            return
+                "HostName=datau-iothub.azure-devices.net;DeviceId=zach-test-device;SharedAccessKey=9TwTa7dKw3wFtHl8I4yi4uJnxFRXuOL2i6JBCm6DqXQ=";
+
             var tpmDevice = new TpmDevice();
 
             string connectionString = "";
